@@ -1,0 +1,23 @@
+/* PAWS Code Roger Ward 2022 */
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class JavaRandomStringFromArray {
+
+    public static String randomStringFromArr() {
+        String[] arr = {"Roger", "Bob", "Cat", "David", "Ed", "Fred", "Fatima"};
+        int randIdx = ThreadLocalRandom.current().nextInt(arr.length);
+        String randomElem = arr[randIdx];
+        return randomElem;
+    }
+    public static void main(String[] args) {
+
+        String rn = (randomStringFromArr());
+
+        String S1 = new String("DDDDD has Covid19. DDDDD has Asthma. DDDDD is on valium");
+
+        System.out.println("Original String is ': " + S1);
+        System.out.println(" String after replacing 'DDDDD' with 'random name': " + S1.replace("DDDDD", rn));
+
+    }
+}
